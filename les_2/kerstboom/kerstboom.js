@@ -85,43 +85,43 @@ function drawStar(x, y, innerRadius, outerRadius, rotation, peaks, color, line) 
 function drawTree(x, y, scale) {
 	// leaves
 	let treePoints = [
-		{ x: x + 75, y: y },
-		{ x: x + 45, y: y + 60 },
-		{ x: x + 60, y: y + 60 },
-		{ x: x + 30, y: y + 120 },//2
-		{ x: x + 45, y: y + 120 },//1\
-		{ x: x + 15, y: y + 180 },
-		{ x: x + 30, y: y + 180 },
-		{ x: x, y: y + 240 },
-		{ x: x + 150, y: y + 240 },
-		{ x: x + 120, y: y + 180 },
-		{ x: x + 135, y: y + 180 },
-		{ x: x + 105, y: y + 120 },//1
-		{ x: x + 120, y: y + 120 },//2
-		{ x: x + 90, y: y + 60 },
-		{ x: x + 105, y: y + 60 },
-		{ x: x + 75, y: y + 0 }
+		{ x: 75, y: 0 },
+		{ x: 45, y: 60 },
+		{ x: 60, y: 60 },
+		{ x: 30, y: 120 },//2
+		{ x: 45, y: 120 },//1\
+		{ x: 15, y: 180 },
+		{ x: 30, y: 180 },
+		{ x: 0, y: 240 },
+		{ x: 150, y: 240 },
+		{ x: 120, y: 180 },
+		{ x: 135, y: 180 },
+		{ x: 105, y: 120 },//1
+		{ x: 120, y: 120 },//2
+		{ x: 90, y: 60 },
+		{ x: 105, y: 60 },
+		{ x: + 75, y: 0 }
 	]
 	let balls = [
-		{ x: x + 65, y: y + 50, radius: 4 },
-		{ x: x + 80, y: y + 70, radius: 6 },
-		{ x: x + 60, y: y + 150, radius: 8 },
-		{ x: x + 130, y: y + 200, radius: 5 },
-		{ x: x + 80, y: y + 170, radius: 7 },
-		{ x: x + 80, y: y + 70, radius: 9 },
-		{ x: x + 72, y: y + 100, radius: 6 },
-		{ x: x + 55, y: y + 180, radius: 14 },
-		{ x: x + 85, y: y + 50, radius: 6 },
-		{ x: x + 80, y: y + 220, radius: 10 }
+		{ x: 65, y: 50, radius: 4 },
+		{ x: 80, y: 70, radius: 6 },
+		{ x: 60, y: 150, radius: 8 },
+		{ x: 130, y: 200, radius: 5 },
+		{ x: 80, y: 170, radius: 7 },
+		{ x: 80, y: 70, radius: 9 },
+		{ x: 72, y: 100, radius: 6 },
+		{ x: 55, y: 180, radius: 14 },
+		{ x: 85, y: 50, radius: 6 },
+		{ x: 80, y: 220, radius: 10 }
 	], points = 40
 
 	//draw leaves
 	g.beginPath(); g.fillStyle = "#00ff00"
-	g.moveTo(treePoints[0].x * scale, treePoints[0].y * scale)
+	g.moveTo(x + treePoints[0].x * scale, y + treePoints[0].y * scale)
 	console.log(treePoints[0]);
 	for (let i = 1, l = treePoints.length; i < l; i++) {
 		console.log(treePoints[i]);
-		g.lineTo(treePoints[i].x * scale, treePoints[i].y * scale)
+		g.lineTo(x + treePoints[i].x * scale, y + treePoints[i].y * scale)
 	}
 
 	g.closePath();
@@ -138,15 +138,15 @@ function drawTree(x, y, scale) {
 
 	// draw balls
 	balls.forEach(element => {
-		drawBall(element.x * scale, element.y * scale, element.radius * scale, points, randcolor())
+		drawBall(x + element.x * scale, y + element.y * scale, element.radius * scale, points, randcolor())
 	});
 
 	// draw star
-	drawStar(x + 75, y, 20, 30, 0, 7, "yellow", true)
+	drawStar(x + (75 * scale), y, 20 * scale, 30 * scale, 0, 7, "yellow", true)
 }
 
 g.moveTo(800, 800)
-drawTree(0, 50, 1)
+drawTree(0, 50, 3)
 
 // drawStar(200, 200, 100, 175, 0, 6, "yellow")
 
