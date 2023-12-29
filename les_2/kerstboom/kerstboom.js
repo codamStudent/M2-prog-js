@@ -78,7 +78,7 @@ function drawStar(x, y, innerRadius, outerRadius, rotation, peaks, color, line) 
 		// console.log(innerPeaks[key].x, innerPeaks[key].y);
 	}
 	g.closePath();
-	if(line)g.stroke();
+	if (line) g.stroke();
 	g.fill();
 }
 
@@ -142,7 +142,7 @@ function drawTree(x, y, scale) {
 	});
 
 	// draw star
-	drawStar(x+75, y,20,30,0,7,"yellow", true)
+	drawStar(x + 75, y, 20, 30, 0, 7, "yellow", true)
 }
 
 g.moveTo(800, 800)
