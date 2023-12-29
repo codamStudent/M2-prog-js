@@ -127,41 +127,41 @@ g.fillStyle = "red"
 g.fillRect(0, 0, canvas.width, canvas.clientHeight);
 
 // g.fillStyle = "gray"
-function drawHouse(sizeMod = 1) {
+function drawHouse(sizeMod = 1, x, y) {
     // sizemod allows the house to be scalable
 
-    drawBox([300 * sizeMod, 100 * sizeMod], [700 * sizeMod, 200 * sizeMod], [600 * sizeMod, 400 * sizeMod], [200 * sizeMod, 300 * sizeMod], "orange")
-    drawBox([200 * sizeMod, 300 * sizeMod], [600 * sizeMod, 400 * sizeMod], [600 * sizeMod, 600 * sizeMod], [200 * sizeMod, 500 * sizeMod], "gray")
-    drawBox([600 * sizeMod, 400 * sizeMod], [800 * sizeMod, 300 * sizeMod], [800 * sizeMod, 500 * sizeMod], [600 * sizeMod, 600 * sizeMod], "gray")
-    drawBox([700 * sizeMod, 200 * sizeMod], [800 * sizeMod, 300 * sizeMod], [700 * sizeMod, 350 * sizeMod], [600 * sizeMod, 400 * sizeMod], "gray")
+    drawBox([300 * sizeMod + x, 100 * sizeMod + y], [700 * sizeMod + x, 200 * sizeMod + y], [600 * sizeMod + x, 400 * sizeMod + y], [200 * sizeMod + x, 300 * sizeMod + y], "orange")
+    drawBox([200 * sizeMod + x, 300 * sizeMod + y], [600 * sizeMod + x, 400 * sizeMod + y], [600 * sizeMod + x, 600 * sizeMod + y], [200 * sizeMod + x, 500 * sizeMod + y], "gray")
+    drawBox([600 * sizeMod + x, 400 * sizeMod + y], [800 * sizeMod + x, 300 * sizeMod + y], [800 * sizeMod + x, 500 * sizeMod + y], [600 * sizeMod + x, 600 * sizeMod + y], "gray")
+    drawBox([700 * sizeMod + x, 200 * sizeMod + y], [800 * sizeMod + x, 300 * sizeMod + y], [700 * sizeMod + x, 350 * sizeMod + y], [600 * sizeMod + x, 400 * sizeMod + y], "gray")
 }
 
-function drawHouseWithWindowWithLightsOff(sizeMod = 1) {
+function drawHouseWithWindowWithLightsOff(sizeMod = 1, x, y) {
     // sizemod allows the house to be scalable
     // house
-    drawBox([300 * sizeMod, 100 * sizeMod], [700 * sizeMod, 200 * sizeMod], [600 * sizeMod, 400 * sizeMod], [200 * sizeMod, 300 * sizeMod], "orange")
-    drawBox([200 * sizeMod, 300 * sizeMod], [600 * sizeMod, 400 * sizeMod], [600 * sizeMod, 600 * sizeMod], [200 * sizeMod, 500 * sizeMod], "gray")
-    drawBox([600 * sizeMod, 400 * sizeMod], [800 * sizeMod, 300 * sizeMod], [800 * sizeMod, 500 * sizeMod], [600 * sizeMod, 600 * sizeMod], "gray")
-    drawBox([700 * sizeMod, 200 * sizeMod], [800 * sizeMod, 300 * sizeMod], [700 * sizeMod, 350 * sizeMod], [600 * sizeMod, 400 * sizeMod], "gray")
+    drawBox([300 * sizeMod + x, 100 * sizeMod + y], [700 * sizeMod + x, 200 * sizeMod + y], [600 * sizeMod + x, 400 * sizeMod + y], [200 * sizeMod + x, 300 * sizeMod + y], "orange")
+    drawBox([200 * sizeMod + x, 300 * sizeMod + y], [600 * sizeMod + x, 400 * sizeMod + y], [600 * sizeMod + x, 600 * sizeMod + y], [200 * sizeMod + x, 500 * sizeMod + y], "gray")
+    drawBox([600 * sizeMod + x, 400 * sizeMod + y], [800 * sizeMod + x, 300 * sizeMod + y], [800 * sizeMod + x, 500 * sizeMod + y], [600 * sizeMod + x, 600 * sizeMod + y], "gray")
+    drawBox([700 * sizeMod + x, 200 * sizeMod + y], [800 * sizeMod + x, 300 * sizeMod + y], [700 * sizeMod + x, 350 * sizeMod + y], [600 * sizeMod + x, 400 * sizeMod + y], "gray")
 
     // window
-    drawBox([(600 - 200) * 0.75 * sizeMod, 375 * sizeMod], [400 * sizeMod, 400 * sizeMod], [400 * sizeMod, 500 * sizeMod], [(600 - 200) * 0.75 * sizeMod, 475 * sizeMod], "black")
+    drawBox([(600 - 200) * 0.75 * sizeMod + x, 375 * sizeMod + y], [400 * sizeMod + x, 400 * sizeMod + y], [400 * sizeMod + x, 500 * sizeMod + y], [(600 - 200) * 0.75 * sizeMod + x, 475 * sizeMod + y], "black")
 }
-function drawHouseWithWindowWithLightsOn(sizeMod = 1) {
+function drawHouseWithWindowWithLightsOn(sizeMod = 1, x, y) {
     // sizemod allows the house to be scalable
     // house
-    drawBox([300 * sizeMod, 100 * sizeMod], [700 * sizeMod, 200 * sizeMod], [600 * sizeMod, 400 * sizeMod], [200 * sizeMod, 300 * sizeMod], "orange")
-    drawBox([200 * sizeMod, 300 * sizeMod], [600 * sizeMod, 400 * sizeMod], [600 * sizeMod, 600 * sizeMod], [200 * sizeMod, 500 * sizeMod], "gray")
-    drawBox([600 * sizeMod, 400 * sizeMod], [800 * sizeMod, 300 * sizeMod], [800 * sizeMod, 500 * sizeMod], [600 * sizeMod, 600 * sizeMod], "gray")
-    drawBox([700 * sizeMod, 200 * sizeMod], [800 * sizeMod, 300 * sizeMod], [700 * sizeMod, 350 * sizeMod], [600 * sizeMod, 400 * sizeMod], "gray")
+    drawBox([300 * sizeMod + x, 100 * sizeMod + y], [700 * sizeMod + x, 200 * sizeMod + y], [600 * sizeMod + x, 400 * sizeMod + y], [200 * sizeMod + x, 300 * sizeMod + y], "orange")
+    drawBox([200 * sizeMod + x, 300 * sizeMod + y], [600 * sizeMod + x, 400 * sizeMod + y], [600 * sizeMod + x, 600 * sizeMod + y], [200 * sizeMod + x, 500 * sizeMod + y], "gray")
+    drawBox([600 * sizeMod + x, 400 * sizeMod + y], [800 * sizeMod + x, 300 * sizeMod + y], [800 * sizeMod + x, 500 * sizeMod + y], [600 * sizeMod + x, 600 * sizeMod + y], "gray")
+    drawBox([700 * sizeMod + x, 200 * sizeMod + y], [800 * sizeMod + x, 300 * sizeMod + y], [700 * sizeMod + x, 350 * sizeMod + y], [600 * sizeMod + x, 400 * sizeMod + y], "gray")
 
     // window
-    drawBox([(600 - 200) * 0.75 * sizeMod, 375 * sizeMod], [400 * sizeMod, 400 * sizeMod], [400 * sizeMod, 500 * sizeMod], [(600 - 200) * 0.75 * sizeMod, 475 * sizeMod], "blue")
+    drawBox([(600 - 200) * 0.75 * sizeMod + x, 375 * sizeMod + y], [400 * sizeMod + x, 400 * sizeMod + y], [400 * sizeMod + x, 500 * sizeMod + y], [(600 - 200) * 0.75 * sizeMod + x, 475 * sizeMod + y], "blue")
 }
 if (Math.floor(Math.random() * 2))
-drawHouseWithWindowWithLightsOff(1)
-else 
-drawHouseWithWindowWithLightsOn(1)
+    drawHouseWithWindowWithLightsOff(1, 0, 0)
+else
+    drawHouseWithWindowWithLightsOn(1, 0, 0)
 
 
 // g.fillStyle = "black";
